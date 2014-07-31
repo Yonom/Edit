@@ -3,17 +3,17 @@ Edit
 
 A CupCake plugin for editing worlds.
 
-# Features
+## Features
 
 - Copy and paste areas with ease
 - Fill areas automatically
 - Supports both foreground and background blocks!
 
-# Installing
-Make sure you have (CupCake)[http://cupcake.yonom.org/] installed.
+## Installing
+Make sure you have   [CupCake](http://cupcake.yonom.org/) installed.
 To install this plugin, download it from the downloads page and put it inside your profile's directory.
 
-# Commands
+## Commands
 Here are the commands this Plugin supports:
 
 - *!none:* removes your current tool selectione
