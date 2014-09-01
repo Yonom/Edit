@@ -5,12 +5,16 @@ using CupCake.Permissions;
 
 namespace Edit.Commands
 {
-    public sealed class Wand : Command<Edit>
+    public sealed class Wand : CupCakeMuffinPart<Edit>
     {
+        protected override void Enable()
+        {
+        }
+
+        [Command("wand")]
         [MinGroup(Group.Moderator)]
-        [Label("wand")]
         [CorrectUsage("")]
-        protected override void Run(IInvokeSource source, ParsedCommand message)
+        private void WandCommand(IInvokeSource source, ParsedCommand message)
         {
             var pSource = source as PlayerInvokeSource;
             if (pSource == null)

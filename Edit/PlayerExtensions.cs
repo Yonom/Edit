@@ -12,20 +12,17 @@ namespace Edit
 
         public static Tool GetSelectedTool(this Player player)
         {
-            Tool data;
-            player.Metadata.GetMetadata(SelectedToolMetadataName, out data);
-            return data;
+            return player.Get<Tool>(SelectedToolMetadataName);
         }
 
         public static void SetSelectedTool(this Player player, Tool data)
         {
-            player.Metadata.SetMetadata(SelectedToolMetadataName, data);
+            player.Set(SelectedToolMetadataName, data);
         }
 
         public static Stack<Point> GetWandStack(this Player player)
         {
-            Stack<Point> data;
-            player.Metadata.GetMetadata(WandStackMetadataName, out data);
+            var data = player.Get<Stack<Point>>(WandStackMetadataName);
 
             if (data == null)
             {
@@ -37,19 +34,17 @@ namespace Edit
 
         public static void SetWandStack(this Player player, Stack<Point> data)
         {
-            player.Metadata.SetMetadata(WandStackMetadataName, data);
+            player.Set(WandStackMetadataName, data);
         }
 
         public static Clipboard GetClipboard(this Player player)
         {
-            Clipboard data;
-            player.Metadata.GetMetadata(ClipboardMetadataName, out data);
-            return data;
+            return player.Get<Clipboard>(ClipboardMetadataName);
         }
 
         public static void SetClipboard(this Player player, Clipboard data)
         {
-            player.Metadata.SetMetadata(ClipboardMetadataName, data);
+            player.Set(ClipboardMetadataName, data);
         }
     }
 }

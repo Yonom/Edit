@@ -8,12 +8,16 @@ using CupCake.Upload;
 
 namespace Edit.Commands
 {
-    public sealed class Paste : Command<Edit>
+    public sealed class Paste : CupCakeMuffinPart<Edit>
     {
+        protected override void Enable()
+        {
+        }
+
+        [Command("paste")]
         [MinGroup(Group.Moderator)]
-        [Label("paste")]
         [CorrectUsage("")]
-        protected override void Run(IInvokeSource source, ParsedCommand message)
+        private void Run(IInvokeSource source, ParsedCommand message)
         {
             var pSource = source as PlayerInvokeSource;
             if (pSource == null)

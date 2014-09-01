@@ -8,12 +8,16 @@ using CupCake.Permissions;
 
 namespace Edit.Commands
 {
-    public sealed class Copy : Command<Edit>
+    public sealed class Copy : CupCakeMuffinPart<Edit>
     {
+        protected override void Enable()
+        {
+        }
+
+        [Command("copy")]
         [MinGroup(Group.Moderator)]
-        [Label("copy")]
         [CorrectUsage("")]
-        protected override void Run(IInvokeSource source, ParsedCommand message)
+        private void CopyCommand(IInvokeSource source, ParsedCommand message)
         {
             var pSource = source as PlayerInvokeSource;
             if (pSource == null)

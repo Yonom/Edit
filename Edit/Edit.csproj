@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\CupCake.1.6.7\build\CupCake.props" Condition="Exists('..\packages\CupCake.1.6.7\build\CupCake.props')" />
+  <Import Project="..\packages\CupCake.1.7.3\build\CupCake.props" Condition="Exists('..\packages\CupCake.1.7.3\build\CupCake.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,7 +12,7 @@
     <AssemblyName>Edit</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>7b8e791e</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>c326143d</NuGetPackageImportStamp>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -35,67 +35,67 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CupCake">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.Actions">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.Actions.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.Actions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.Chat">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.Chat.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.Chat.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.Command">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.Command.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.Command.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.Core">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.Core.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.HostAPI">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.HostAPI.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.HostAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.Keys">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.Keys.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.Keys.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.Messages">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.Messages.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.Messages.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.Permissions">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.Permissions.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.Permissions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.Players">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.Players.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.Players.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.Potions">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.Potions.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.Potions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.Room">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.Room.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.Room.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.Upload">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.Upload.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.Upload.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CupCake.World">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\CupCake.World.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\CupCake.World.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MuffinFramework.NET">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\MuffinFramework.NET.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\MuffinFramework.NET.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PlayerIOClient">
-      <HintPath>..\packages\CupCake.1.6.7\lib\net40\PlayerIOClient.dll</HintPath>
+      <HintPath>..\packages\CupCake.1.7.3\lib\net40\PlayerIOClient.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -133,8 +133,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\CupCake.1.6.7\build\CupCake.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CupCake.1.6.7\build\CupCake.props'))" />
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\packages\CupCake.1.7.3\build\CupCake.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CupCake.1.7.3\build\CupCake.props'))" />
   </Target>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
