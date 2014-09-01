@@ -27,6 +27,7 @@ namespace Edit
             this.EnablePart<Fill>();
             this.EnablePart<Copy>();
             this.EnablePart<Paste>();
+            //this.EnablePart<Replace>();
 
             this.Events.Bind<PlaceWorldEvent>(this.OnPlace);
         }

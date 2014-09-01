@@ -112,6 +112,9 @@
     <Compile Include="Commands\Fill.cs" />
     <Compile Include="Commands\None.cs" />
     <Compile Include="Commands\Paste.cs" />
+    <Compile Include="Commands\Replace.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Commands\Wand.cs" />
     <Compile Include="Edit.cs" />
     <Compile Include="ObjectExtensions.cs" />
