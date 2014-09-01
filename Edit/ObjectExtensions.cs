@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 
 namespace Edit
 {
     public static class ObjectExtensions
     {
         /// <summary>
-        /// Clones a object via shallow copy
+        ///     Clones a object via shallow copy
         /// </summary>
         /// <typeparam name="T">Object Type to Clone</typeparam>
         /// <param name="obj">Object to Clone</param>
@@ -17,12 +13,11 @@ namespace Edit
         public static T CloneObject<T>(this T obj) where T : class
         {
             if (obj == null) return null;
-            System.Reflection.MethodInfo inst = obj.GetType().GetMethod("MemberwiseClone",
-                System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            MethodInfo inst = obj.GetType().GetMethod("MemberwiseClone",
+                BindingFlags.Instance | BindingFlags.NonPublic);
             if (inst != null)
                 return (T)inst.Invoke(obj, null);
-            else
-                return null;
+            return null;
         }
     }
 }

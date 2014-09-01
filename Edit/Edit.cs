@@ -1,12 +1,8 @@
 ﻿using System;
-using System.CodeDom;
 using System.Collections.Generic;
-using System.Data.OleDb;
 using CupCake;
 using CupCake.Core;
-using CupCake.Core.Events;
 using CupCake.Messages.Blocks;
-using CupCake.Messages.Receive;
 using CupCake.Messages.Send;
 using CupCake.Players;
 using CupCake.Upload;
@@ -45,45 +41,34 @@ namespace Edit
                 var point = new Point(b.X, b.Y);
                 stack.Push(point);
 
-                var ev = e.OldWorldBlock.ToEvent();
+                IBlockPlaceSendEvent ev = e.OldWorldBlock.ToEvent();
                 this.Events.Raise(new UploadRequestEvent(ev));
             }
 
-            if (_fillPoints.Remove(new Point(e.WorldBlock.X, e.WorldBlock.Y)) ||
+            if (this._fillPoints.Remove(new Point(e.WorldBlock.X, e.WorldBlock.Y)) ||
                 p.GetSelectedTool() == Tool.Fill)
             {
-                var oldBlock = e.OldWorldBlock.ToEvent();
-                var ev = b.ToEvent();
+                IBlockPlaceSendEvent oldBlock = e.OldWorldBlock.ToEvent();
+                IBlockPlaceSendEvent ev = b.ToEvent();
                 this.FillAround(ev, oldBlock);
             }
         }
 
         private void FillAround(IBlockPlaceSendEvent e, IBlockPlaceSendEvent oldBlock)
         {
-            this.CheckAndFillAround(e, oldBlock, ev =>
-            {
-                ev.X++;
-            });
-            this.CheckAndFillAround(e, oldBlock, ev =>
-            {
-                ev.X--;
-            });
-            this.CheckAndFillAround(e, oldBlock, ev =>
-            {
-                ev.Y++;
-            });
+            this.CheckAndFillAround(e, oldBlock, ev => { ev.X++; });
+            this.CheckAndFillAround(e, oldBlock, ev => { ev.X--; });
+            this.CheckAndFillAround(e, oldBlock, ev => { ev.Y++; });
 
-            this.CheckAndFillAround(e, oldBlock, ev =>
-            {
-                ev.Y--;
-            });
+            this.CheckAndFillAround(e, oldBlock, ev => { ev.Y--; });
         }
 
-        private void CheckAndFillAround(IBlockPlaceSendEvent e, IBlockPlaceSendEvent oldBlock, Action<IBlockPlaceSendEvent> alterFunc)
+        private void CheckAndFillAround(IBlockPlaceSendEvent e, IBlockPlaceSendEvent oldBlock,
+            Action<IBlockPlaceSendEvent> alterFunc)
         {
-            var newE = e.CloneObject();
+            IBlockPlaceSendEvent newE = e.CloneObject();
             alterFunc(newE);
-            var b = WorldService[newE.Layer, newE.X, newE.Y];
+            WorldBlock b = this.WorldService[newE.Layer, newE.X, newE.Y];
             if (b.IsSame(oldBlock))
             {
                 this.SendAndFillAround(newE, oldBlock);

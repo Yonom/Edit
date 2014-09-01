@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using CupCake;
 using CupCake.Command;
 using CupCake.Command.Source;
 using CupCake.Core;
 using CupCake.Messages.Blocks;
 using CupCake.Permissions;
-using CupCake.Upload;
 
 namespace Edit.Commands
 {
@@ -52,13 +47,13 @@ namespace Edit.Commands
             int minY = Math.Min(p1.Y, p2.Y);
             int maxY = Math.Max(p1.Y, p2.Y);
 
-            for (var pX = minX; pX <= maxX; pX++)
+            for (int pX = minX; pX <= maxX; pX++)
             {
-                for (var pY = minY; pY <= maxY; pY++)
+                for (int pY = minY; pY <= maxY; pY++)
                 {
-                    for (var l = 0; l <= 1; l++)
+                    for (int l = 0; l <= 1; l++)
                     {
-                        if (WorldService[(Layer)l, pX, pY].Block == block1)
+                        if (this.WorldService[(Layer)l, pX, pY].Block == block1)
                         {
                             this.UploadService.UploadBlock(pX, pY, block2);
                         }
