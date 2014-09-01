@@ -21,3 +21,4 @@ Here are the commands this Plugin supports:
 - **!fill:** selects the fill tool (fill the placed area using the given block)
 - **!copy:** copies the selected area (between your last two placed points using the wand tool) into your "clipboard"
 - **!paste:** pastes your clipboard on the last selected point in your clipboard
+- **!replace:** replaces the given block with the other given block in the selected area
