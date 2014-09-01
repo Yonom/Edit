@@ -14,7 +14,7 @@ Make sure you have   [CupCake](http://cupcake.yonom.org/) installed.
 To install this plugin, download it from the downloads page and put it inside your profile's directory.
 
 ## Commands
-Here are the commands this Plugin supports:
+Here are the commands this plugin supports:
 
 - **!none:** removes your current tool selectione
 - **!wand:** selects the wand tool (select points by putting a folower (summer 2011 decoration)
